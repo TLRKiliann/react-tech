@@ -1,0 +1,29 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+
+  font-family: "One-serif";
+
+  background: dimgray;
+  color: white;
+}
+
+.App {
+  margin: auto;
+}
+
+.App h1 {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.App h3 {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.App p {
+  margin-top: 10px;
+  text-align: center;
+}
