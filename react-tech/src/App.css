@@ -95,3 +95,31 @@ form {
   display: flex;
   flex-direction: row;
 }
+
+
+
+/*Third component*/
+.third--class {
+  margin: 0% 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.hbtn--class {
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.hbtn--class h3 {
+  margin: auto;
+}
+
+.hbtn--class button {
+  margin: auto;
+  margin-left: 20px;
+  padding: 0px 10px;
+}
