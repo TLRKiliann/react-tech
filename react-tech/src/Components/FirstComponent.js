@@ -44,12 +44,14 @@ export default class FirstComponent extends React.Component {
         localStorage.setItem('rememberMe', rememberMe);
         localStorage.setItem('Name', name);
         localStorage.setItem('Password', pwd);
+        alert("Look at your local storage ! (Click remove to clear data)");
     };
 
     Remove = () => {
         localStorage.removeItem('rememberMe')
         localStorage.removeItem('Name');
         localStorage.removeItem('Password');
+        alert("Don't forget to deactivate rememberMe !")
     };
 
     render() {
@@ -57,7 +59,10 @@ export default class FirstComponent extends React.Component {
 
         return (
             <>
+                <h1>FirstComponent (Form)</h1>
+                
                 <form onSubmit={this.handleFormSubmit}>
+
                     <div className="gender--class">
                         <h4 value={gender}>
                             Gender: {gender ? "Madam" : "Mister"}
@@ -73,16 +78,14 @@ export default class FirstComponent extends React.Component {
                             Enter your name :
                         </h4>
 
-                        <input value={name} onChange={(e) => this.handleChangeName(e)} />
+                        <input
+                            name="name"
+                            type="text"
+                            value={name}
+                            onChange={(e) => this.handleChangeName(e)}
+                            placeholder="Name"
+                            required />
                     </div>
-
-                    <div className="name--class">
-                        <h4 value={name}>
-                            Verify your name : {name}
-                        </h4>
-
-                    </div>
-
 
                     <div className="password--class">
                         <label>
@@ -95,6 +98,12 @@ export default class FirstComponent extends React.Component {
                                 onChange={(e) => this.setState({pwd: e.target.value})}
                                 required />
                         </label>
+                    </div>
+
+                    <div className="verifyname--class">
+                        <h4 value={name}>
+                            Verify your name : {name}
+                        </h4>
 
                     </div>
 
@@ -103,6 +112,8 @@ export default class FirstComponent extends React.Component {
                             Verify your password: {pwd}
                         </h4>
                     </div>
+
+                    <hr/>
 
                     <div className="remember--class">
 
@@ -124,7 +135,7 @@ export default class FirstComponent extends React.Component {
                             <button type="submit" className='btn--submit'>Sign In</button>
                             <button
                                 onClick={this.Remove}
-                                className='btn--onClick'
+                                className='btn--remove'
                             >
                                 Remove
                             </button>

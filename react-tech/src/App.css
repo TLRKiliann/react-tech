@@ -38,38 +38,66 @@ form {
 }
 
 .gender--class {
-  margin: auto;
   width: 80%;
+  margin-left: 40px;
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-around;
+}
+
+.gender--class button {
+  position: absolute;
+  right: 34%;
 }
 
 .name--class {
-  margin: auto;
   width: 80%;
+  margin-left: 40px;
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-around;
+}
+
+.name--class input {
+  position: absolute;
+  right: 30%;
+}
+
+.verifyname--class {
+  width: 80%;
+  margin-left: 40px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.password--class {
+  width: 80%;
+  margin-left: 40px;
+}
+
+.password--class input {
+  position: absolute;
+  right: 30%;
 }
 
 .password--class label {
-  margin: auto;
-  width: 80%;
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-around;
 }
 
 .verifypasswd--class {
-  margin: auto;
   width: 80%;
+  margin-left: 40px;
   display: flex;
   flex-direction: row;
   align-items: center;
+}
+
+hr {
+  width: 50%;
+  color: white;
 }
 
 .remember--class {
@@ -92,9 +120,25 @@ form {
 }
 
 .submitremove--class {
+  margin: 20px 0px;
   display: flex;
   flex-direction: row;
 }
+
+.btn--submit {
+  margin-right: 20px;
+}
+
+.btn--remove {
+  margin-left: 20px;
+}
+
+
+/*Second component*/
+.second--class h2 {
+  text-align: center;
+}
+
 
 
 
@@ -120,6 +164,6 @@ form {
 
 .hbtn--class button {
   margin: auto;
-  margin-left: 20px;
+  margin-left: 40px;
   padding: 0px 10px;
 }
