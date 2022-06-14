@@ -9,8 +9,10 @@ const SecondComponent = () => {
     }, [setFetch]);
 
     return (
-        <div>
-            SecondComponent
+        <div className="second--class">
+            <h2>
+                SecondComponent (API)
+            </h2>
             <div>
                 {fetch && (<p>Hello</p>)}
             </div>
