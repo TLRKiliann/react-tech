@@ -20,10 +20,78 @@ body {
 
 .App h3 {
   margin-top: 10px;
-  text-align: center;
+  align-items: center;
 }
 
 .App p {
   margin-top: 10px;
-  text-align: center;
+  align-items: center;
+}
+
+form {
+  margin: 0% 20%;
+  display: flex;
+  flex-direction: column;
+
+  border: 2px solid white;
+  border-radius: 15px;
+}
+
+.gender--class {
+  margin: auto;
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.name--class {
+  margin: auto;
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.password--class label {
+  margin: auto;
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.verifypasswd--class {
+  margin: auto;
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.remember--class {
+  margin: auto;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.remember--class label {
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.remember--class label > h5 {
+  margin-left: 10px;
+}
+
+.submitremove--class {
+  display: flex;
+  flex-direction: row;
 }
