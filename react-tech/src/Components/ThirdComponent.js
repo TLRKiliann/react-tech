@@ -7,35 +7,33 @@ class ThirdComponent extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
+            stuff: ''
         };
-        this.handleQueryOne = this.handleQueryOne.bind(this);
-        this.handleQuery = this.handleQuery.bind(this);
-        this.handleQueryThree = this.handleQueryThree.bind(this);
     }
 
-    handleQueryOne = () => {
-        $('#domElem').css('color', 'yellow');
-    };
-
-    handleQuery = () => {
-        $('#domElemTwo').css('color', 'orange');
-    };
-
-    handleQueryThree = () => {
-        $('#domElemThree').css('color', 'red');
-    };
+    componentDidMount() {
+        $('.btn-one').on('click', function() {
+            $('#domElem').css('background', 'navy')
+        })
+        $('.btn-two').on('click', function() {
+            $('#domElemTwo').css('color', 'orange');
+        })
+        $('.btn-three').on('click', function() {
+            $('#domElemThree').hide();
+        })
+    }
 
     render() {
         return (
             <div className="third--class">
                 <h2>
-                    ThirdComponent
+                    ThirdComponent (jQuery)
                 </h2>
                 <div className="hbtn--class">
                     <h3 id="domElem">
                         first test
                     </h3>
-                    <button type='button' onClick={this.handleQueryOne}>
+                    <button type='button' className="btn-one">
                         Click
                     </button>
                 </div>
@@ -44,7 +42,7 @@ class ThirdComponent extends React.Component {
                     <h3 id="domElemTwo">
                         second test
                     </h3>
-                    <button type='button' onClick={this.handleQuery}>
+                    <button type='button' className="btn-two">
                         Click
                     </button>
                 </div>
@@ -52,10 +50,10 @@ class ThirdComponent extends React.Component {
 
                 <div className="hbtn--class">
                     <h3 id="domElemThree">
-                        third test
+                        third test {this.state.stuff}
                     </h3>
-                    <button type='button' onClick={this.handleQueryThree}>
-                        Click
+                    <button type='button' className="btn-three">
+                        Hide
                     </button>
                 </div>
 
