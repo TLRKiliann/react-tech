@@ -1,12 +1,25 @@
 import React from 'react';
+import axios from 'axios';
 import {useState, useEffect} from 'react';
 
+
 const SecondComponent = () => {
-    const {fetch, setFetch} = useState();
+    const {users, setUsers} = useState(null);
+    const URL = "https://jsonplaceholder.typicode.com/users";
 
     useEffect(() => {
         console.log("It's useEffect !!!");
-    }, [setFetch]);
+        axios.get(URL)
+            .then((response) => {
+                const users = response.data;
+                console.log(response.data)
+                console.log(response.data[0])
+            });
+    }, [users]);
+
+    if (!users) {
+        return null;
+    }
 
     return (
         <div className="second--class">
@@ -14,7 +27,7 @@ const SecondComponent = () => {
                 SecondComponent (API)
             </h2>
             <div>
-                {fetch && (<p>Hello</p>)}
+                {users ? users.map((user, i) => {<p>user.name</p>}) : null}
             </div>
         </div>
     );
