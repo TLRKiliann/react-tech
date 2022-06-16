@@ -1,13 +1,13 @@
 import React from 'react';
 import axios from 'axios';
-//import {useState, useEffect} from 'react';
 
 
 class SecondComponent extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            serverResponse : []
+            serverResponse : [],
+            rules: true
         };
         this.callServer = this.callServer.bind(this);
     }
@@ -28,32 +28,46 @@ class SecondComponent extends React.Component {
     };
 
     callServer = () => {
-        this.setState({ serverResponse : this.state.serverResponse.map(( serverRes )=> {
-            return (
-                <p key={serverRes.id}>{serverRes.username}</p>)
-            })})
+        this.setState({rules: !this.state.rules});
     }
 
     render() {
         return (
             <div className="second--class">
+
                 <h2>
                     SecondComponent (API)
                 </h2>
 
-                <div>
+                <div className="mainsec--div">
 
-                    { this.state.serverResponse.map(( serverRes )=> {
-                        return (
-                            <p key={serverRes.id}>{serverRes.name}</p>)
-                    })}
-                    
+                    <div id="rules--div">
 
-                    <button onClick={this.callServer}>
-                        User Name
-                    </button>
+                        {!this.state.rules && <h3>{this.state.rules ? "Name" : "Name & Username"}</h3>}
+                        {this.state.rules && <h3>{this.state.rules ? "Name" : "Name & Username"}</h3>}
+
+                    </div>
+                    <div id="server--div">
+
+                        { this.state.serverResponse.map(( serverRes )=> {
+                            if (this.state.rules) {
+                                return (
+                                    <p key={serverRes.id}>{serverRes.name}</p>
+                                )
+                            }
+                            else {
+                                return (
+                                    <p key={serverRes.id}>{serverRes.name} = {serverRes.username}</p>
+                                )
+                            }
+                        })}
+
+                        <button onClick={this.callServer}>
+                            {this.state.rules ? "User Name":"Only Name"}
+                        </button>
+
+                    </div>
                 </div>
-
             </div>
         );
     }
