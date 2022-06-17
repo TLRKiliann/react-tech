@@ -139,7 +139,34 @@ hr {
   text-align: center;
 }
 
+.mainsec--div {
+  margin: 0% 20%;
+}
 
+table, th, td, tr {
+  border: 1px solid black;
+}
+
+td {
+  text-align: left;
+}
+
+.name--div {
+  width: 300px;
+}
+
+.email--div {
+  width: 400px;
+}
+
+#btn--usrname {
+  padding: 2px 10px;
+}
+
+#btn--mail {
+  margin-left: 20px;
+  padding: 2px 10px;
+}
 
 
 /*Third component*/
