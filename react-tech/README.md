@@ -1,19 +1,17 @@
 # react-tech
 
-Especialy to train some tricks with components, jQuery and a simple API.
+3 simple components as follow :
 
-The application dewrapp as follow :
+## FirstComponent
 
-## 1) FirstComponent
-
-**Toggle**
+**toggle() & localStorage**
 
 **event.target.value**
 
-## 2) SecondComponent
+## SecondComponent
 
-**API**
+**Axios (simple fetch data with public API)**
 
-## 3) ThirdComponent
+## ThirdComponent
 
-**jQuery**
+**3 buttons with jQuery actions**
